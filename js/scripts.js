@@ -4,22 +4,26 @@ $(document).ready(function() {
 $("#formOne").submit(function(event) {
     var personalityInput = $("input:radio[name=personality]:checked").val();
     var activityInput = $("#activity").val();
+    console.log(activityInput);
     var foodInput = $("#food").val();
 
-    // $(".personality").text(personalityInput);
-    // $(".activity").text(activityInput);
-    // $(".food").text(foodInput);
+    $(".personality").text(personalityInput);
+    $(".activity").text(activityInput);
+    $(".food").text(foodInput);
 
-    if (activity === camping) {
+    if (activityInput === "Camping") {
       $("#culkin").show();
-      $("#culkin").siblings().hide();
-    } else if (activity === shopping) {
-      $("#beyonce").show();
-      $("#beyonce").siblings().hide();
-    } else if (activity === sleepy) {
-      $("#jonah").show();
-      $("#jonah").siblings().hide();
-    }
+      } else {
+        console.log("We elsed!")
+      }
+    //   $("#culkin").siblings().hide();
+    // } else if (activity === shopping) {
+    //   $("#beyonce").show();
+    //   $("#beyonce").siblings().hide();
+    // } else if (activity === sleepy) {
+    //   $("#jonah").show();
+    //   $("#jonah").siblings().hide();
+    // }
 
       event.preventDefault();
   });
