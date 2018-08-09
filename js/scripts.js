@@ -12,17 +12,20 @@ $(document).ready(function() {
     $(".activity").text(activityInput);
     $(".food").text(foodInput);
 
-    if (activityInput === "Shopping") {
-      $("#culkin").toggle();
+    if (activityInput === "Shopping" && foodInput === "Sushi") {
+      $("#culkin").show();
       $("#culkin").siblings().hide();
-    } else if (activityInput === "Camping") {
-      $("#beyonce").toggle();
+      console.log(activity)
+    } else if (activityInput === "Camping" && foodInput === "Salad") {
+      $("#beyonce").show();
       $("#beyonce").siblings().hide();
-    } else if (activityInput === "Sleepy") {
-      $("#jonah").toggle();
+    } else if (activityInput === "Shopping") {
+      $("#jonah").show();
       $("#jonah").siblings().hide();
+    } else if (personalityInput === "extroverted") {
+      $("#beyonce").show();
+      $("#beyonce").siblings().hide();
     }
-
     event.preventDefault();
   });
 });
