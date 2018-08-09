@@ -24,7 +24,7 @@ $(document).ready(function() {
       $("#jonah").siblings().hide();
     } else if (personalityInput === "extroverted") {
       $("#beyonce").show();
-      $("#beyonce").siblings().hide();
+      $("#jonah").show();
     }
     event.preventDefault();
   });
