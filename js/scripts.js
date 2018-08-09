@@ -1,7 +1,8 @@
 
+
 $(document).ready(function() {
 
-$("#formOne").submit(function(event) {
+  $("#formOne").submit(function(event) {
     var personalityInput = $("input:radio[name=personality]:checked").val();
     var activityInput = $("#activity").val();
     console.log(activityInput);
@@ -11,20 +12,17 @@ $("#formOne").submit(function(event) {
     $(".activity").text(activityInput);
     $(".food").text(foodInput);
 
-    if (activityInput === "Camping") {
-      $("#culkin").show();
-      } else {
-        console.log("We elsed!")
-      }
-    //   $("#culkin").siblings().hide();
-    // } else if (activity === shopping) {
-    //   $("#beyonce").show();
-    //   $("#beyonce").siblings().hide();
-    // } else if (activity === sleepy) {
-    //   $("#jonah").show();
-    //   $("#jonah").siblings().hide();
-    // }
+    if (activityInput === "Shopping") {
+      $("#culkin").toggle();
+      $("#culkin").siblings().hide();
+    } else if (activityInput === "Camping") {
+      $("#beyonce").toggle();
+      $("#beyonce").siblings().hide();
+    } else if (activityInput === "Sleepy") {
+      $("#jonah").toggle();
+      $("#jonah").siblings().hide();
+    }
 
-      event.preventDefault();
+    event.preventDefault();
   });
 });
