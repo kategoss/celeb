@@ -1,12 +1,26 @@
-$(document).ready(function() {
-  var age = parseInt(prompt("How old are you?"));
 
-  if(age > 18) {
-    $("#of_age").show();
-  } else if (age === 18) {
-    alert("Congratulations! Have a great first vote!");
-    $("#of_age").show();
-  } else {
-    $("#not_of_age").show();
-  }
+$(document).ready(function() {
+
+$("#formOne").submit(function(event) {
+    var personalityInput = $("input:radio[name=personality]:checked").val();
+    var activityInput = $("#activity").val();
+    var foodInput = $("#food").val();
+
+    // $(".personality").text(personalityInput);
+    // $(".activity").text(activityInput);
+    // $(".food").text(foodInput);
+
+    if (activity === camping) {
+      $("#culkin").show();
+      $("#culkin").siblings().hide();
+    } else if (activity === shopping) {
+      $("#beyonce").show();
+      $("#beyonce").siblings().hide();
+    } else if (activity === sleepy) {
+      $("#jonah").show();
+      $("#jonah").siblings().hide();
+    }
+
+      event.preventDefault();
+  });
 });

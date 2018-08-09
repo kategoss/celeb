@@ -1,3 +1,15 @@
-#of_age, #not_of_age {
+img {
+  width: 300px;
+}
+
+#beyonce {
+  display: none;
+}
+
+#jonah {
+  display: none;
+}
+
+#culkin {
   display: none;
 }

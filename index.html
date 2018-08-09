@@ -1,25 +1,63 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Voting Page</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div id="of_age">
-        <h2>Time to Vote!</h2>
-        <p>If you want to vote, check out the voting registration site <a href="https://sos.oregon.gov/voting/Pages/registration.aspx">here</a>.</p>
-        <p>To find your nearest polling location, see <a href="https://sos.oregon.gov/voting/pages/drop-box-locator.aspx">here</a>.</p>
-        <p>Check out the upcoming elections, <a href="https://multco.us/elections/current-and-upcoming-elections">here</a>.</p>
+<head>
+  <meta charset="utf-8">
+  <title>Celebrity Match</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Find Your Celebrity Match!</h2>
+    <p>Take the short survey below and find out which Celebrity you would be BEST friends with.</p>
+    <form id="formOne">
+      <label>What is your favorite thing to do?</label>
+      <select class="form-control" id="activity">
+        <option>Camping</option>
+        <option>Shopping</option>
+        <option>Sleepy</option>
+      </select>
+      <label>What do you love to eat most?</label>
+      <select class="form-control" id="food">
+        <option>Sushi</option>
+        <option>Pizza</option>
+        <option>Salad</option>
+      </select>
+      <label>How would you identify yourself?</label>
+      <div class="radio">
+        <label>
+          <input type="radio" name="personality" value="extroverted">
+          <img src="https://assets4.bigthink.com/system/idea_thumbnails/51836/size_1024/extrovert.jpg?1374433951">
+        </label>
       </div>
-      <div id="not_of_age">
-        <h2>Sorry, next time!</h2>
-        <p>If you want to vote in the next election, check out the rules <a href="http://www.ncsl.org/research/elections-and-campaigns/primaries-voting-age.aspx">here</a>.</p>
+      <div class="radio">
+        <label>
+          <input type="radio" name="personality" value="introverted">
+          <img src="https://d30o31ylp1hvg6.cloudfront.net/uploads/blog/the-psychology-of-introverted-employees-understand-them-to-manage-them-better/_thumb/848x450/psychology-of-introverted-employees.png">
+        </label>
       </div>
+
+      <button type="submit" class="btn btn-info">Find out who your bestie is!</button>
+    </form>
+
+    <div id="result">
+      <h3>Your celebrity match is:</h3>
+    <div id="culkin">
+      <h3>Macaulay Culkin! Don't stay home alone, ya'll</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj1epP14x6ujxXN4W5N8kuN8vDyeRTfvmkaoxbX7DSky5Ar3mTaw">
     </div>
-  </body>
+    <div id="beyonce">
+      <h3>BEYONCE</h3>
+      <img src="https://media.giphy.com/media/12f99nJKAgGq9W/giphy.gif">
+    </div>
+    <div id="jonah">
+      <h3>Jonah Hill</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVgZZ9UL_UbiapZ6boZrT-uV_Z4-ISvV2Bm8t4pgATevuCU3e6">
+    </div>
+  </div>
+  </div>
+</body>
 </html>
